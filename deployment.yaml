@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: ltartsmusic/gitopstest:24
+      - image: ltartsmusic/gitopstest:26
         name: flaskdemo
         resources: {}
 status: {}
