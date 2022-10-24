@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: gitopswebtest
+  name: gitopswebtest
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flaskdemo
+      app: gitopswebtest
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: gitopswebtest
     spec:
       containers:
       - image: ltartsmusic/gitopstest:64
-        name: flaskdemo
+        name: gitopswebtest
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: flaskdemo
+    app: gitopswebtest
