@@ -36,3 +36,14 @@ spec:
     targetPort: 5000
   selector:
     app: gitopswebtest
+ ---
+ apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  defaultBackend:
+    service: lb-service
+      name: test
+      port:
+        number: 80
