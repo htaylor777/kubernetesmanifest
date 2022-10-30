@@ -3,6 +3,7 @@ node {
     stage('Clone repository') {
         checkout scm
     }
+    
  stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
