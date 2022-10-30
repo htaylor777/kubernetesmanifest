@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: gitopswebtest
-  name: gitopswebtest
+    app: awsgitopswebtest
+  name: awsgitopswebtest
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: gitopswebtest
+      app: awsgitopswebtest
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: gitopswebtest
+        app: awsgitopswebtest
     spec:
       containers:
-      - image: ltartsmusic/gitopstest:29
-        name: gitopswebtest
+      - image: ltartsmusic/awsgitopswebtest:latest
+        name: awsgitopswebtest
         resources: {}
 status: {}
 ---
@@ -35,7 +35,7 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: gitopswebtest
+    app: awsgitopswebtest
 ---
 apiVersion: v1
 kind: Ingress
@@ -44,6 +44,6 @@ metadata:
 spec:
   defaultBackend:
     service: lb-service
-      name: gitopswebtest
+      name: awsgitopswebtest
       port:
         number: 80
