@@ -18,7 +18,7 @@ spec:
         app: awsgitopswebtest
     spec:
       containers:
-      - image: ltartsmusic/awsgitopswebtest:9
+      - image: ltartsmusic/awsgitopswebtest:10
         name: awsgitopswebtest
         resources: {}
 status: {}
