@@ -36,14 +36,3 @@ spec:
     targetPort: 5000
   selector:
     app: awsgitopswebtest
----
-apiVersion: v1
-kind: Ingress
-metadata:
-  name: test-ingress
-spec:
-  defaultBackend:
-    service: lb-service
-      name: awsgitopswebtest
-      port:
-        number: 80
