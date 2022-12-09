@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: awsgitopswebtest
-  name: awsgitopswebtest
+    app: gitopswebproject
+  name: gitopswebproject
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: awsgitopswebtest
+      app: gitopswebproject
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: awsgitopswebtest
+        app: gitopswebproject
     spec:
       containers:
-      - image: ltartsmusic/awsgitopswebtest:10
-        name: awsgitopswebtest
+      - image: ltartsmusic/gitopswebproject:11
+        name: gitopswebproject
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: awsgitopswebtest
+    app: gitopswebproject
